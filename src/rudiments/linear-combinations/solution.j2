@@ -1,0 +1,15 @@
+Adding the vectors gives
+
+$$
+\begin{aligned}
+& {{ utils.as_coeff(a) }}\begin{bmatrix} {{ u | map('string') | join(" \\\\ ") }} \end{bmatrix} {{ utils.as_operation(b) }}\begin{bmatrix} {{ v | map('string') | join(" \\\\ ") }} \end{bmatrix} \\
+= & \begin{bmatrix} {{ au | map('string') | join(" \\\\ ") }} \end{bmatrix} + \begin{bmatrix} {{ bv | map('string') | join(" \\\\ ") }} \end{bmatrix} \\
+= & \begin{bmatrix} {{ w | map('string') | join(" \\\\ ") }} \end{bmatrix}
+\end{aligned}
+$$
+
+So the answer is
+
+$$
+{{ w | map('string') | join("\\times") }} = {{ answer }}
+$$

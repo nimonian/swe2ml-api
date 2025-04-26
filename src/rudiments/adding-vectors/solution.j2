@@ -1,0 +1,15 @@
+Adding the vectors gives
+
+$$
+\begin{bmatrix} {{ u | map('string') | join(" \\\\ ") }} \end{bmatrix}
++
+\begin{bmatrix} {{ v | map('string') | join(" \\\\ ") }} \end{bmatrix}
+=
+\begin{bmatrix} {{ w | map('string') | join(" \\\\ ") }} \end{bmatrix}
+$$
+
+So the answer is
+
+$$
+{{ w | map('string') | join("\\times") }} = {{ answer }}
+$$

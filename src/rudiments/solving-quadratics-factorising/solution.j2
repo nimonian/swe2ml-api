@@ -1,0 +1,23 @@
+Factorising, we get
+$$
+{{ sp.latex(f.factor()) }} = 0
+$$
+
+{% if p0 == q0 %}
+  and so the repeated root is
+  $$
+  {{ x }} = {{ p0 }}
+  $$
+
+{% else %}
+  and so the roots are
+  $$
+  \begin{aligned}
+  {{ x }} & = {{ p0 }} \\
+  {{ x }} & = {{ q0 }}
+  \end{aligned}
+  $$
+
+{% endif %}
+
+The answer to the given question is ${{ answer }}$.

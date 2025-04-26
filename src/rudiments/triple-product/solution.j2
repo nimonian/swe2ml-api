@@ -1,0 +1,29 @@
+The volume is given by the triple product:
+
+$$
+\begin{aligned}
+\vec{u} \cdot \left( \vec{v} \times \vec{w} \right)
+
+& =
+
+\begin{bmatrix} u_1 \\ u_2 \\ u_3 \end{bmatrix}
+\cdot
+\begin{bmatrix} v_2 w_3 - w_3 v_2 \\ v_3 w_1 - w_1 v_2 \\ v_1 w_2 - w_1 v_3 \end{bmatrix} \\
+
+& =
+
+{{ sp.latex(sp.Matrix(u)) }} \cdot {{ sp.latex(sp.Matrix(vw)) }} \\
+
+& =
+
+{{ A }} {{ utils.as_operation(B) }} {{ utils.as_operation(C) }} \\
+
+& = {{ A + B + C }}
+\end{aligned}
+$$
+
+{% if A + B + C < 0 %}
+
+Since ${{ A + B + C }} < 0$, we should take the absolute value ${{ answer }}$ as our answer.
+
+{% endif %}

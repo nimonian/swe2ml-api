@@ -1,0 +1,14 @@
+{% if d != 1 %}
+  Factor out ${{ d }}$ first to get
+  $$
+  \begin{aligned}
+  {{ utils.factored_int(d) }} \left[ {{ sp.latex(f.expand()) }} \right] & = 0 \\
+  {{ sp.latex(f.expand()) }} & = 0
+  \end{aligned}
+  $$
+{% endif %}
+
+{% if a != 1 %}
+  Since ${{ a }} \times {{ c }} = {{ a * c }}$,
+  we could split ${{sp.latex(b * x)}}$ into ${{ sp.latex(p1 * q2 * x) }}$ and ${{ sp.latex(q1 * p2 * x) }}$.
+{% endif %}

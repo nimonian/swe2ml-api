@@ -1,0 +1,16 @@
+First, we calculate the transpose:
+
+$$
+{{A}}^{T} = {{ sp.latex(N) }}
+$$
+
+We find the entry in row ${{r1 + 1}}$ and column ${{c1 + 1}}$,
+then multiply it with the entry in row ${{r2 + 1}}$ and column ${{c2 + 1}}$:
+
+$$
+\begin{aligned}
+{{A}}^{T}_{ {{r1+1}}{{c1+1}} }{{A}}^{T}_{ {{r2+1}}{{c2+1}} }
+&= ({{ N[r1, c1] }})({{ N[r2, c2] }}) \\
+& = {{ answer }}
+\end{aligned}
+$$

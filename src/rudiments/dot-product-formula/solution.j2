@@ -1,0 +1,20 @@
+Generally,
+
+$$
+\vec{u} \cdot \vec{v} = u_1 v_1 + u_2 v_2 + \ldots u_n v_n
+$$
+
+So we get
+
+$$
+\begin{aligned}
+\begin{bmatrix} {{ u | map("string") | join("\\\\") }} \end{bmatrix}
+\cdot
+\begin{bmatrix} {{ v | map("string") | join("\\\\") }} \end{bmatrix}
+
+& = {{ uv_str }} \\
+
+& = {{ answer }}
+
+\end{aligned}
+$$

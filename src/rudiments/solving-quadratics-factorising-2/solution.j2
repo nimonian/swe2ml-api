@@ -1,0 +1,39 @@
+{% if d != 1 %}
+  Factor out ${{ d }}$ first to get
+  $$
+  \begin{aligned}
+  {{ utils.factored_int(d) }} \left[ {{ sp.latex(f.expand()) }} \right] & = 0 \\
+  {{ sp.latex(f.expand()) }} & = 0
+  \end{aligned}
+  $$
+{% endif %}
+
+{% if a != 1 %}
+  Since ${{ a }} \times {{ c }} = {{ a * c }}$,
+  we could split ${{sp.latex(b * x)}}$ into ${{ sp.latex(p1 * q2 * x) }}$ and ${{ sp.latex(q1 * p2 * x) }}$:
+
+  $$
+  \begin{aligned}
+  {{ sp.latex(p1 * p2 * x ** 2 + p1 * q2 * x) }} {{ utils.add_term(q1 * p2, x) }} {{ utils.add_num(q1 * q2) }} \\
+
+  {{sp.latex(p1 * x)}}\left( {{ sp.latex(p2 * x + q2) }} \right)
+  {{utils.add_num(q1)}}\left( {{ sp.latex(p2 * x + q2) }} \right) \\
+
+  {{ sp.latex(f) }} = 0
+  \end{aligned}
+  $$
+{% else %}
+  This is a simple quadratic and factorises to
+  $$
+  {{ sp.latex(f) }} = 0
+  $$
+{% endif %}
+
+The roots are
+$$
+\begin{aligned}
+{{ x }} & = {{ sp.latex(r1) }} \\
+{{ x }} & = {{ sp.latex(r2) }}
+\end{aligned}
+$$
+and the solution to the given question is ${{ answer }}$.

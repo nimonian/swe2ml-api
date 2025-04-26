@@ -1,0 +1,11 @@
+We calculate
+
+$$
+\begin{aligned}
+{{ sp.latex(M) }}{{ sp.latex(v) }}
+& = \begin{bmatrix} {{ rows | map("string") | join(" \\\\ ") }} \end{bmatrix} \\
+& ={{ sp.latex(Mv) }}
+\end{aligned}
+$$
+
+The sum of the components is ${{ answer }}$

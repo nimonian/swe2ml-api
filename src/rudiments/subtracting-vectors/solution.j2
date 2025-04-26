@@ -1,0 +1,20 @@
+Let
+
+$$
+\vec{u} = \begin{bmatrix} {{u | map("string") | join("\\\\")}} \end{bmatrix}
+
+\quad
+
+\vec{v} = \begin{bmatrix} {{v | map("string") | join("\\\\")}} \end{bmatrix}
+$$
+
+Then
+
+$$
+\begin{aligned}
+|\vec{v} - \vec{u}|
+& = \left| \begin{bmatrix} {{w | map("string") | join("\\\\")}} \end{bmatrix} \right| \\
+& = \sqrt{ {{ sq_sum_list }} } \\
+& \approx {{ answer }} \text{ (3 s.f.)}
+\end{aligned}
+$$
